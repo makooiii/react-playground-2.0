@@ -1,5 +1,10 @@
+import { useState } from "react";
+
 function ListGroup() {
   const items = ["Manila", "Baguio", "Davao", "Palawan", "Aklan"];
+
+  // Hook
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
@@ -7,7 +12,13 @@ function ListGroup() {
         {/* Conditonal statement to display */}
         {items.length === 0 && <p>No Items Found</p>}
         {items.map((item, index) => (
-          <li className="list-group-item" key={index}>
+          <li
+            className={selectedIndex === index ? "list-group-item active" : "list-group-item"}
+            key={index}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
+          >
             {item}
           </li>
         ))}
