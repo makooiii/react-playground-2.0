@@ -1,4 +1,5 @@
 
+// Much better to be in alphabetical order
 interface Props {
   children: string;
   // it will only accept colors that listed, otherwise it will not display any
