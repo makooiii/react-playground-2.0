@@ -3,7 +3,8 @@
 // import { useState } from "react";
 // import Alert from "./components/Alert";
 // import DismissBtn from "./components/DismissBtn";
-import Form from "./components/Form";
+// import Form from "./components/Form";
+import HeaderText from "./elements/HeaderText";
 
 function App() {
   // const items = ["Manila", "Baguio", "Davao", "Palawan", "Aklan"];
@@ -19,7 +20,9 @@ function App() {
       {/* {selectShowAlert && <Alert onClose={() =>setShowAlert(false)}>This is my alert!!</Alert>}
       <DismissBtn  onClick={() =>setShowAlert(true)} ></DismissBtn> */}
         
-        <Form />
+        {/* <Form /> */}
+
+        <HeaderText />
     </>
   );
 }
